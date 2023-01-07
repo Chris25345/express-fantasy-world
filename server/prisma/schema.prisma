@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "darwin"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Humanoid {
+  id                    Int                     @id @default(autoincrement())
+  name                  String
+  gender                String
+  age                   Int
+  race_id               Race                    @relation(references: [id], fields: [raceId])
+  raceId                Int
+  Humanoids_Occupations Humanoids_Occupations[]
+}
+
+model Race {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Humanoid Humanoid[]
+}
+
+model Occupation {
+  id                    Int                     @id @default(autoincrement())
+  name                  String
+  Humanoids_Occupations Humanoids_Occupations[]
+}
+
+model Humanoids_Occupations {
+  id            Int        @id @default(autoincrement())
+  humanoid_id   Humanoid   @relation(references: [id], fields: [humanoidId])
+  occupation_id Occupation @relation(references: [id], fields: [occupationId])
+  humanoidId    Int
+  occupationId  Int
+}

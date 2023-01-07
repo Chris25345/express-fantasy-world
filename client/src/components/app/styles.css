@@ -1,0 +1,101 @@
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.content {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+table,
+td,
+th {
+  border: 1px solid #aaa;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 30px;
+}
+
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+#content {
+  width: 70%;
+}
+
+.select-box {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 10px;
+}
+
+.pagination_btn {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+}
+
+.pagination_btn:hover {
+  background-color: #ddd;
+}
+
+.pagination-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.tables {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.table-box {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  margin: 5px;
+}
